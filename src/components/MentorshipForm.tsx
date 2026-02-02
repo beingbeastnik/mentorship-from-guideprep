@@ -106,8 +106,6 @@ export default function MentorshipForm() {
     }
 
     if (isLoading) {
-        const minutes = Math.floor(timeLeft / 60)
-        const seconds = timeLeft % 60
         return (
             <div className="container" style={{ maxWidth: '600px', paddingTop: '8rem' }}>
                 <motion.div
@@ -131,19 +129,6 @@ export default function MentorshipForm() {
                     <p style={{ color: '#64748b', fontSize: '1.1rem', marginBottom: '2rem' }}>
                         We're processing your request and matching you with the best mentor. Please do not close or refresh this page.
                     </p>
-                    <div style={{
-                        fontSize: '3rem',
-                        fontWeight: 700,
-                        color: '#2563eb',
-                        fontVariantNumeric: 'tabular-nums',
-                        backgroundColor: '#eff6ff',
-                        padding: '1.5rem',
-                        borderRadius: '1.5rem',
-                        display: 'inline-block',
-                        minWidth: '200px'
-                    }}>
-                        {minutes}:{seconds.toString().padStart(2, '0')}
-                    </div>
                 </motion.div>
                 <style>{`
                     @keyframes spin {
